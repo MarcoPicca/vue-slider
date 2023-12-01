@@ -34,13 +34,6 @@ createApp({
     },
 
     methods: {
-        changeSlideTo(index){
-            if (index >= this.slides[index].image || index < 0){
-                return false;
-            }
-            this.activeIndex = index;
-            
-        },
 
         upSlide(){
             this.activeIndex--;
@@ -49,12 +42,15 @@ createApp({
             }
             
         },
+
         downSlide(){
             this.activeIndex++;
             if (this.activeIndex >= this.slides.length){
                 this.activeIndex = 0;
             }
         },
+
+        
     }
     
 }).mount('#app');
